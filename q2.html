@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up fom</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        label{
+            font-size: 22px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #emailA, #address1, #address2, #org{
+            width: 300px;
+        }
+        #zip{
+            width: 70px;
+        }
+        label{
+            margin-right: 50px;
+        }
+        input{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Up Form Example</h1>
+    <form>
+        <table>
+            <tr>
+                <td><label for="fname">First, Last Name*:</label></td>
+                <td><input type="text" id="fname" name="fname" required>
+                    <input type="text" id="lname" name="lname" required> </td>
+            </tr>
+            <tr>
+                <td><label for="org">Organization:</label></td>
+                <td><input type="text" id="org" name="org"></td>
+            </tr>
+            <tr>
+                <td><label for="emailA">Email address*:</label></td>
+                <td><input type="email" id="emailA" name="emailA"></td>
+            </tr>
+            <tr>
+                <td><label for="workphone">Work Phone:</label></td>
+                <td><input type="number" id="workphone" name="workphone"></td>
+            </tr>
+            <tr>
+                <td><label for="homephone">Home Phone:</label></td>
+                <td><input type="number" id="homephone" name="homephone"></td>
+            </tr>
+            <tr>
+                <td><label for="cellphone">Cell Phone:</label></td>
+                <td><input type="number" id="cellphone" name="cellphone"></td>
+            </tr>
+            <tr>
+                <td><label for="fax">Fax:</label></td>
+                <td><input type="number" id="fax" name="fax"></td>
+            </tr>
+            <tr>
+                <td><label for="address1">Address 1*:</label></td>
+                <td><input type="text" id="address1" name="address1" required></td>
+            </tr>
+            <tr>
+                <td><label for="address2">Address 2:</label></td>
+                <td><input type="text" id="address2" name="address2"></td>
+            </tr>
+            <tr>
+                <td><label for="city">City*:</label></td>
+                <td><input type="text" id="city" name="city" required></td>
+            </tr>
+            <tr>
+                <td><label for="state">State Province:</label></td>
+                <td><input type="text" id="state" name="state"></td>
+            </tr>
+            <tr>
+                <td><label for="zip">Zip Postal Code:</label></td>
+                <td><input type="number" id="zip" name="zip"></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country*:</label></td>
+                <td><input type="text" id="country" name="country" required></td>
+            </tr>
+            <tr>
+                <td><label for="req">* . required fields:</label></td>
+                <td><button type="button" onclick="myFunction()">Submit</button></td>
+            </tr>
+        </table>
+        <p id="details"></p>
+    </form>
+</body>
+<script>
+ function myFunction(){
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var emailA = document.getElementById('emailA').value;
+        var address1 = document.getElementById('address1').value;
+        var city = document.getElementById('city').value;
+        var country = document.getElementById('country').value;
+        if(fname === "" || lname === "" || emailA === "" || address1 === "" || city === ""
+        || country === ""){
+        }else{
+            document.getElementById("details").innerHTML = '!Congratulations ' + fname + ' ' + lname + ' you are now signed up'
+        }
+        
+    }
+</script>
+</html>
